@@ -26,9 +26,8 @@ export class HomeDashboardComponent implements OnInit {
   ngOnInit(): void {
     this.todoService.getTodos().subscribe(todos => {
       this.todos = todos;
+      this.stats = this.todoService.getTodoStats();
     });
-    
-    this.stats = this.todoService.getTodoStats();
   }
 
   getStatusClass(status: TodoStatus): string {

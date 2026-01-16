@@ -99,9 +99,10 @@ export class TodoService {
   }
 
   addTodo(todo: Omit<Todo, 'id'>): void {
+    const maxId = this.todos.length > 0 ? Math.max(...this.todos.map(t => t.id)) : 0;
     const newTodo: Todo = {
       ...todo,
-      id: Math.max(...this.todos.map(t => t.id), 0) + 1
+      id: maxId + 1
     };
     this.todos.push(newTodo);
     this.todosSubject.next(this.todos);
