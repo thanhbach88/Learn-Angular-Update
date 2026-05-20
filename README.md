@@ -1,27 +1,47 @@
-# Angular16Learn
+# Learn Angular Update
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
+An Angular learning project built with [Angular CLI](https://github.com/angular/angular-cli) v17 and [Tailwind CSS](https://tailwindcss.com/).
 
-## Development server
+## Tech Stack
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Angular** 17 (standalone components)
+- **Tailwind CSS** 3
+- **TypeScript** 5.4
+- **SCSS** for component styles
 
-## Code scaffolding
+## Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- npm (comes with Node.js)
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start the dev server
+npm start
+```
+
+Navigate to `http://localhost:4200/`. The app reloads automatically on source file changes.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+npm run build
+```
 
-## Running unit tests
+Build artifacts are stored in `dist/angular16-learn/`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Running Tests
 
-## Running end-to-end tests
+```bash
+npm test
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Unit tests run via [Karma](https://karma-runner.github.io) with Jasmine.
 
-## Further help
+## Further Help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+See the [Angular CLI docs](https://angular.dev/cli) for more information.
