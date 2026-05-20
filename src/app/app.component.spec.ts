@@ -1,9 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { provideRouter } from '@angular/router';
+import { routes } from './app.routes';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [AppComponent]
+    imports: [AppComponent],
+    providers: [provideRouter(routes)]
   }));
 
   it('should create the app', () => {
@@ -18,10 +21,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('Angular16-Learn');
   });
 
-  it('should render title', () => {
+  it('should render router-outlet', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('Angular16-Learn app is running!');
+    expect(compiled.querySelector('router-outlet')).toBeTruthy();
   });
 });
